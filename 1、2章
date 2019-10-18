@@ -1,0 +1,203 @@
+P18 实例1.1 实例1.3
+#P18 实例1.1 实例1.3
+
+#实例1.1
+print("实例1.1")
+radius=25
+area=3.1415*radius*radius
+print(area)
+print("{:.2f}".format(area))
+
+#实例1.3
+print("实例1.3")
+a,b=0,1
+while a<1000:
+    print(a,end=',')
+    a,b=b,a+b
+
+============ RESTART: D:\Program Files\Python\Python37\第一二次作业.py ============
+实例1.1
+1963.4375000000002
+1963.44
+实例1.3
+0,1,1,2,3,5,8,13,21,34,55,89,144,233,377,610,987,
+>>>
+ 
+ 
+
+
+P20 实例1.4
+#P20 实例1.4
+print("P20 实例1.4")
+import turtle
+turtle.pensize(2)
+turtle.circle(10)
+turtle.circle(40)
+turtle.circle(80)
+turtle.circle(160)
+
+============ RESTART: D:\Program Files\Python\Python37\第一二次作业.py ============
+P20 实例1.4
+>>>
+
+ 
+ 
+ 
+
+
+P21 实例1.5
+>>> #P21 实例1.5
+>>> from datetime import datetime
+>>> now=datetime.now()
+>>> print(now)
+2019-10-08 23:11:39.741274
+>>> now.strftime("%x")
+'10/08/19'
+>>> now.strftime("%X")
+'23:11:39'
+>>>
+
+ 
+
+
+P35 实例1.1
+#P35 实例1.1
+print("P35 实例1.1")
+#e1.1TempConvert
+TempStr=input("请输入带有符号的温度值：")
+if TempStr[-1] in ['F','f']:
+    C=(eval(TempStr[0:-1])-32)/1.8
+    print("转换后的温度是{:.2f}C".format (C))
+elif TempStr[-1] in ['C','c']:
+    F=1.8*eval(TempStr[0:-1])+32
+    print("转换后的温度是：{:.2f}F".format(F))
+else:
+print("输入格式错误")
+
+============ RESTART: D:\Program Files\Python\Python37\第一二次作业.py ============
+P35 实例1.1
+请输入带有符号的温度值：26C
+转换后的温度是：78.80F
+>>>
+
+ 
+ 
+
+
+P44 实例1.2
+#P44 实例1.2
+TempStr=input("请输入带有符号的温度值：")
+while TempStr[-1] not in ['N','n']:
+    if TempStr[-1] in ['F','f']:
+        C=(eval(TempStr[0:-1])-32)/1.8
+        print("转换后的温度是{:.2f}C".format(C))
+    elif TempStr[-1] in ['C','c']:
+        F=1.8*eval(TempStr[0:-1])+32
+        print("转换后的温度是{:.2f}F".format(F))
+    else:
+        print("输入格式错误")
+    TempStr = input("请输入带有符号的温度值：")
+
+>>> 
+============ RESTART: D:\Program Files\Python\Python37\第一二次作业.py ============
+请输入带有符号的温度值：26c
+转换后的温度是78.80F
+请输入带有符号的温度值：80f
+转换后的温度是26.67C
+请输入带有符号的温度值：35
+输入格式错误
+请输入带有符号的温度值：27 C
+转换后的温度是80.60F
+请输入带有符号的温度值：
+
+ 
+
+ 
+
+P46 实例2.1
+#P46 实例2.1
+import turtle
+turtle.setup(650,350,200,200)
+turtle.penup()
+turtle.fd(-250)
+turtle.pendown()
+turtle.pensize(25)
+turtle.pencolor("purple")
+turtle.seth(-40)
+for i in range(4):
+    turtle.circle(40,80)
+    turtle.circle(-40,80)
+turtle.circle(40,80/2)
+turtle.fd(40)
+turtle.circle(16,180)
+turtle.fd(40*2/3)
+
+============ RESTART: D:\Program Files\Python\Python37\第一二次作业.py ============
+>>>
+ 
+
+ 
+ 
+
+编程实验：P29 程序练习题1.1
+#编程实验：P29 程序练习题1.1
+str1=input("请输入一个人的名字：")
+str2=input("请输入一个国家名字：")
+print("世界这么大，{}想去{}看看。".format(str1,str2))
+
+============ RESTART: D:\Program Files\Python\Python37\第一二次作业.py ============
+请输入一个人的名字：李庆堂
+请输入一个国家名字：挪威
+世界这么大，李庆堂想去挪威看看。
+
+ 
+
+ 
+
+
+编程实验：P29 程序练习题1.2
+#编程实验：P29 程序练习题1.2
+n=input("请输入整数N：")
+sum=0
+for i in range(int(n)):
+    sum+=i+1
+print("1到N求和结果：",sum )
+
+============ RESTART: D:\Program Files\Python\Python37\第一二次作业.py ============
+请输入整数N：100
+1到N求和结果： 5050
+
+ 
+
+ 
+
+
+编程实验：P56 程序练习题2.2
+#编程实验：P56 程序练习题2.2
+MoneyStr=input("请输入带有符号的中（CNY）或美（USD）货币数额：")
+while MoneyStr[-1] not in ['N','n']:
+    if MoneyStr[-1] in ['D','d']:
+        C=6*eval(MoneyStr[0:-3])
+        print("转换后的中国元CNY（Chinese Yuan）是{:.2f}CNY".format(C))
+    elif MoneyStr[-1] in ['Y','y']:
+        U=eval(MoneyStr[0:-3])/6
+        print("转换后的美国刀USD（United States Dollar）是{:.2f}USD".format(U))
+    else:
+        print("输入格式错误")
+    MoneyStr = input("请输入带有符号的中美货币数额：")
+
+============ RESTART: D:\Program Files\Python\Python37\第一二次作业.py ============
+请输入带有符号的中（CNY）或美（USD）货币数额：100cny
+转换后的美国刀USD（United States Dollar）是16.67USD
+请输入带有符号的中美货币数额：100USD
+转换后的中国元CNY（Chinese Yuan）是600.00CNY
+请输入带有符号的中美货币数额：100
+输入格式错误
+请输入带有符号的中美货币数额：
+
+ 
+
+ 
+
+
+
